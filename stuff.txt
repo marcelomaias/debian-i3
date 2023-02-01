@@ -1,0 +1,23 @@
+Debian Install
+
+after install:
+
+- su - 
+- usermod -aG sudo maia
+- reboot
+- su -
+- apt install sudo
+
+sudo nano /etc/default/grub
+insert:
+GRUB_CMDLINE_LINUX_DEFAULT=“quiet video=1920x1080”
+…
+GRUB_GFXMODE=1920x1080
+sudo update-grub
+
+sudo apt install i3 xorg lightdm slick-greeter lightdm-settings lxappearance nitrogen pcmanfm chromium pulseaudio alsa-utils pavucontrol terminator
+
+Enable DM: (if installed)
+sudo systemctl enable lightdm
+
+sudo reboot
